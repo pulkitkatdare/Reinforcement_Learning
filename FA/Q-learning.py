@@ -111,7 +111,6 @@ class Estimator():
         model = model.partial_fit([state], [y])
         self.models[a] = model
 
-# In[5]:
 
 def make_epsilon_greedy_policy(estimator, epsilon, nA):
     """
@@ -229,4 +228,4 @@ for i_episode in range(100):
         if(done):
             break
 env.render()
-env.monitor.close()
+env.close()
